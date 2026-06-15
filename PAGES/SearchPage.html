@@ -1,60 +1,199 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.tailwindcss.com"></script>
-<title>Search Recipes</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body class="bg-[#FAF7F2]">
+    <title>Food Finder</title>
+    <!-- FONT LINK -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LINK TO ICONS -->
+    <script
+      src="https://kit.fontawesome.com/702bae211a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- LINK TO TAILWINDCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="../assets/Images/FoodFinder-Logo.jpeg"
+      type="image/x-icon"
+    />
+    <!-- CSS FILE LINK -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
 
-<div class="flex min-h-screen">
+  <body class="bg-[#FAF7F2]">
+    <div class="flex min-h-screen">
+      <header
+        class="md:hidden fixed top-0 left-0 right-0 z-50 bg-[#08381F]/95 backdrop-blur-md flex items-center justify-between px-5 py-4"
+      >
+        <div class="flex items-center gap-3">
+          <!-- logo  -->
+          <img
+            src="../assets/Images/FoodFinder-Logo.jpeg"
+            alt="Logo"
+            class="w-10 h-10 rounded-full"
+          />
+          <h1 class="logo-font text-white font-bold text-2xl">FoodFinder</h1>
+        </div>
+        <button id="menuBtn">
+          <i class="fa-solid fa-bars text-white text-2xl"></i>
+        </button>
+      </header>
 
-  <aside class="hidden md:flex w-64 bg-[#0B4D2B] text-white flex-col p-6">
+      <!-- MOBILE SIDEBAR -->
+      <aside
+        id="mobileSidebar"
+        class="fixed top-0 left-[-100%] h-screen w-72 bg-[#08381F] z-50 transition-all duration-500"
+      >
+        <div class="p-6">
+          <div class="flex justify-between items-center">
+            <!-- logo  -->
+            <div class="flex items-center gap-3">
+              <img
+                src="../assets/Images/FoodFinder-Logo.jpeg"
+                alt="Logo"
+                class="w-10 h-10 rounded-full"
+              />
 
-    <h1 class="text-2xl font-bold">
-      🍲 Food Finder
-    </h1>
+              <div class="text-white">
+                <h2 class="logo-font text-2xl font-bold">FoodFinder</h2>
+                <p class="text-gray-400">Discover & Cook</p>
+              </div>
+            </div>
+            <button id="closeBtn">
+              <i class="fa-solid fa-xmark text-white text-xl"></i>
+            </button>
+          </div>
 
-    <nav class="mt-10 space-y-4">
-      <a href="index.html">Home</a>
-      <a href="search.html">Search</a>
-    </nav>
+          <nav class="mt-12 text-lg space-y-8">
+            <a
+              href="index.html"
+              class="flex items-center gap-3 text-white hover:text-yellow-400 transition"
+            >
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
 
-  </aside>
+            <a
+              href="SearchPage.html"
+              class="flex items-center gap-3 text-white hover:text-yellow-400 transition"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Search
+            </a>
+          </nav>
 
-  <main class="flex-1 flex items-center justify-center p-6">
+          <div class="mt-16 bg-[#0B4D2B] rounded-2xl p-5 text-center">
+            <div class="text-4xl mb-3">🍜</div>
 
-    <div class="w-full max-w-3xl text-center">
+            <h3 class="text-white font-semibold">Explore New Recipes</h3>
 
-      <h1 class="text-4xl font-bold text-[#0B4D2B]">
-        Search Recipes
-      </h1>
+            <p class="text-gray-300 text-sm mt-2">
+              Discover and cook amazing meals and cooking inspiration every day.
+            </p>
 
-      <p class="mt-4 text-gray-600">
-        Search for your favorite African meals and discover new dishes.
-      </p>
+            <a
+              href="SearchPage.html"
+              class="block mt-4 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold py-3 rounded-xl transition"
+            >
+              Explore Now
+            </a>
+          </div>
+        </div>
+      </aside>
 
-      <div class="mt-10 relative">
+      <!-- DESKTOP SIDEBAR -->
+      <aside
+        class="hidden md:flex fixed left-0 top-0 h-screen w-72 bg-[#08381F] flex-col justify-between p-6"
+      >
+        <div>
+          <!-- LOGO -->
 
-        <input
-          type="text"
-          placeholder="Search recipes..."
-          class="w-full p-5 pl-14 rounded-2xl shadow-lg border focus:outline-none"
-        />
+          <div class="flex items-center gap-3">
+            <div>
+              <img
+                src="../assets/Images/FoodFinder-Logo.jpeg"
+                alt="Logo"
+                class="w-10 h-10 rounded-full"
+              />
+            </div>
 
-        <span class="absolute left-5 top-5 text-xl">
-          🔍
-        </span>
+            <div>
+              <h2 class="text-white text-2xl font-bold">Food Finder</h2>
 
-      </div>
+              <p class="text-gray-400 text-base">Discover & Cook</p>
+            </div>
+          </div>
 
+          <!-- NAVIGATION -->
+
+          <nav class="mt-16 space-y-5">
+            <a
+              href="RecipeHome.html"
+              class="flex items-center text-xl gap-4 bg-[#0B4D2B] p-4 rounded-2xl text-white"
+            >
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+
+            <a
+              href="SearchPage.html"
+              class="flex items-center text-xl gap-4 p-4 rounded-xl text-gray-300 hover:bg-[#0B4D2B] hover:text-white transition"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Search
+            </a>
+          </nav>
+        </div>
+
+        <!-- EXPLORE CARD -->
+
+        <div class="bg-[#0B4D2B] rounded-3xl p-6 pb-12 text-center">
+          <div class="text-5xl mb-4">🍜</div>
+
+          <h3 class="text-white font-semibold text-lg">Explore New Recipes</h3>
+
+          <p class="text-gray-300 mt-2 text-sm">
+            Discover amazing meals and cooking inspiration every day.
+          </p>
+
+          <a
+            href="SearchPage.html"
+            class="inline-block mt-5 bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3 rounded-xl font-semibold transition hover:scale-105"
+          >
+            Explore Now
+          </a>
+        </div>
+      </aside>
+
+      <!-- MAIN SECTION -->
+      <main class="flex-1 min-h-screen md:ml-72 items-center justify-center pt-24 p-6">
+        <div class="w-full max-w-3xl text-center">
+          <h1 class="text-5xl font-bold  logo-font text-[#0B4D2B]">Search Recipes</h1>
+
+          <p class="mt-4 text-gray-600">
+            Search for your favorite meals and discover new dishes.
+          </p>
+
+          <div class="mt-10 relative">
+            <input
+              type="text"
+              placeholder="Search recipes..."
+              class="w-full p-5 pl-14 rounded-2xl shadow-lg border focus:outline-none"
+            />
+
+            <span class="absolute left-5 top-5 text-xl"> 🔍 </span>
+          </div>
+        </div>
+      </main>
     </div>
 
-  </main>
-
-</div>
-
-</body>
+     <!-- LINK TO JAVASCRIPT FILE -->
+    <script src="../script.js"></script>
+  </body>
 </html>

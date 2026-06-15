@@ -5,36 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Food Finder</title>
+    <!-- FONT LINK -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LINK TO ICONS -->
     <script
       src="https://kit.fontawesome.com/702bae211a.js"
       crossorigin="anonymous"
     ></script>
+    <!-- LINK TO TAILWINDCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-      .logo-font {
-        font-family: "Outfit", sans-serif;
-      }
-      .hero-bg {
-        background-image:
-          linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-          url("../Images/FoodFinder-background.jpeg");
-        background-size: cover;
-        background-position: center;
-      }
-
-      .glass {
-        backdrop-filter: blur(15px);
-        background: rgba(255, 255, 255, 0);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-      }
-    </style>
+    <link
+      rel="shortcut icon"
+      href="../assets/Images/FoodFinder-Logo.jpeg"
+      type="image/x-icon"
+    />
+    <!-- CSS FILE LINK -->
+    <link rel="stylesheet" href="/style.css" />
   </head>
 
   <body class="bg-black overflow-x-hidden">
@@ -45,7 +34,7 @@
       <div class="flex items-center gap-3">
         <!-- logo  -->
         <img
-          src="../Images/FoodFinder-Logo.jpeg"
+          src="../assets/Images/FoodFinder-Logo.jpeg"
           alt="Logo"
           class="w-10 h-10 rounded-full"
         />
@@ -66,7 +55,7 @@
           <!-- logo  -->
           <div class="flex items-center gap-3">
             <img
-              src="../Images/FoodFinder-Logo.jpeg"
+              src="../assets/Images/FoodFinder-Logo.jpeg"
               alt="Logo"
               class="w-10 h-10 rounded-full"
             />
@@ -83,7 +72,7 @@
 
         <nav class="mt-12 text-lg space-y-8">
           <a
-            href="RecipeHome.html"
+            href="index.html"
             class="flex items-center gap-3 text-white hover:text-yellow-400 transition"
           >
             <i class="fa-solid fa-house"></i>
@@ -128,7 +117,7 @@
         <div class="flex items-center gap-3">
           <div>
             <img
-              src="../Images/FoodFinder-Logo.jpeg"
+              src="../assets/Images/FoodFinder-Logo.jpeg"
               alt="Logo"
               class="w-10 h-10 rounded-full"
             />
@@ -145,7 +134,7 @@
 
         <nav class="mt-16 space-y-5">
           <a
-            href="RecipeHome.html"
+            href="index.html"
             class="flex items-center text-xl gap-4 bg-[#0B4D2B] p-4 rounded-2xl text-white"
           >
             <i class="fa-solid fa-house"></i>
@@ -231,20 +220,7 @@
       </div>
     </main>
 
-    <script>
-      const menuBtn = document.getElementById("menuBtn");
-      const closeBtn = document.getElementById("closeBtn");
-      const mobileSidebar = document.getElementById("mobileSidebar");
-
-      menuBtn.addEventListener("click", () => {
-        mobileSidebar.classList.remove("left-[-100%]");
-        mobileSidebar.classList.add("left-0");
-      });
-
-      closeBtn.addEventListener("click", () => {
-        mobileSidebar.classList.remove("left-0");
-        mobileSidebar.classList.add("left-[-100%]");
-      });
-    </script>
+    <!-- LINK TO JAVASCRIPT FILE -->
+    <script src="../script.js"></script>
   </body>
 </html>

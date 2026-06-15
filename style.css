@@ -1,1 +1,22 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.logo-font {
+  font-family: "Outfit", sans-serif;
+}
+.hero-bg {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("./assets/Images/FoodFinder-background.jpeg");
+  background-size: cover;
+  background-position: center;
+}
 
+.glass {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
